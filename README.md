@@ -17,6 +17,7 @@ npm start
 ```
 
 ### Database information
+|   |   |       
 |---|---|
 |  **Host** |  localhost |
 |  **User** |  root |
@@ -24,8 +25,9 @@ npm start
 |  **Database** |  TwinShips |
 
 ## Architecture
+|   |   |
 |---|---|
 |  **Backend-sprog** |  Javascript |
 |  **Framework** |  Express |
-|  **View Engine** |  Pug |
-|  **Database** |  MariaDB |
+|  **View Engine** |  Handlebars |
+|  **Database** |  Mysql |
