@@ -3,9 +3,16 @@ var router = express.Router();
 var db = require('../db/dbLogic');
 
 
-/* GET home page. */
+//Get request på api routen
 router.get('/', async (req, res, next) => {
-  res.send("hej");
+  res.send(await db.getShips());
 });
+
+//
+router.get('/:id', async (req, res, next) => {
+    res.send(await db.getShipsById(req.params.id));
+  });
+
+
 
 module.exports = router;
