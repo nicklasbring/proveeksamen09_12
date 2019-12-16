@@ -1,7 +1,6 @@
 # Proveeksamen09_12
 
 ## Get started
-Kør disse kommandoer i terminalen.
 
 Clone project
 ```
