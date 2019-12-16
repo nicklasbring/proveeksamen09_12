@@ -5,7 +5,7 @@ var db = require('../db/dbLogic');
 
 //get request på api routen
 router.get('/', async (req, res, next) => {
-  res.send(await db.getShips());
+    res.send(await db.getShips());
 });
 
 //get request with choosen id
@@ -23,9 +23,10 @@ router.put('/:id', async (req, res, next) => {
     res.send(await db.updateShip(req.body, req.params.id));
 });
 
-
-
-
+//delete request
+router.delete('/:id', async (req, res, next) => {
+    res.send(await db.deleteShip(req.params.id));
+});
 
 
 module.exports = router;
