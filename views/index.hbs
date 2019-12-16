@@ -1,0 +1,60 @@
+<h1>{{title}}</h1>
+<p>Welcome to {{title}}</p>
+
+<table>
+    <tr>
+        <th>Id</th>
+        <th>Navn</th>
+        <th>Hjemhavn</th>
+        <th>Kaldesignal</th>
+        <th>MMSI</th>
+        <th>Anvendelse</th>
+        <th>BRT/BT</th>
+        <th>Længde</th>
+        <th>Maks antal om bord</th>
+    </tr>
+    <h3>Skibe</h3>
+    {{#ships}}
+    <tr>
+        <td>{{id}}</td>
+        <td>{{navn}}</td>
+        <td>{{hjemhavn}}</td>
+        <td>{{kaldesignal}}</td>
+        <td>{{unikt_mmsi_nummer}}</td>
+        <td>{{anvendelse}}</td>
+        <td>{{brt_bt}}</td>
+        <td>{{laengde}}</td>
+        <td>{{maks_antal_om_bord}}</td>
+    </tr>
+    {{/ships}}
+</table>
+
+<table>
+    <tr>
+        <th>Skib id</th>
+        <th>Fart</th>
+        <th>Kurs</th>
+        <th>GPS Koordinater</th>
+        <th>Vindretning</th>
+        <th>Vindstyrke m/s</th>
+        <th>Temperatur</th>
+        <th>Motor RPM</th>
+    </tr>
+    <br>
+    
+
+    <h3>Sensor data</h3>
+    {{#sensorer}}
+    <tr>
+        <td>{{ship_id}}</td>
+        <td>{{fart}}</td>
+        <td>{{kurs}}</td>
+        <td>{{gps_koordinater}}</td>
+        <td>{{vindretning}}</td>
+        <td>{{vindstyrke}}</td>
+        <td>{{temperatur}}</td>
+        <td>{{omdrejninger}}</td>
+    </tr>
+    {{/sensorer}}
+
+</table>
