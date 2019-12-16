@@ -20,8 +20,9 @@ router.post('/', async (req, res, next) => {
 
 //put request to update an existin ship
 router.put('/:id', async (req, res, next) => {
-    res.send(await db.updateShip(req.body, id));
+    res.send(await db.updateShip(req.body, req.params.id));
 });
+
 
 
 

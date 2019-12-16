@@ -10,7 +10,7 @@ var con = mysql.createConnection({
 
 //function to get all ships from database
 exports.getShips = async() => {
-    let sql = "SELECT * FROM skibsdata"
+    let sql = "SELECT * FROM skibsdata";
 
     return new Promise((resolve, reject) => {
         con.query(sql, (err, result, fields) => {
@@ -50,8 +50,7 @@ exports.createShip = async(ship) => {
         ${ship.id}, ${ship.user_id}, "${ship.navn}", 
         "${ship.hjemhavn}", "${ship.kaldesignal}", ${ship.unikt_mmsi_nummer}, 
         "${ship.anvendelse}", ${ship.brt_bt}, ${ship.laengde}, 
-        ${ship.maks_antal_om_bord})`
-        console.log(sql);
+        ${ship.maks_antal_om_bord})`;
 
     return new Promise((resolve, reject) => {
         con.query(sql, (err, result, fields) =>{
@@ -61,5 +60,19 @@ exports.createShip = async(ship) => {
     });
 }
 
-exports.updateShip = async()
+exports.updateShip = async(ship, id) => {
+    let sql = `UPDATE skibsdata SET user_id=${ship.user_id}, navn="${ship.navn}", 
+    hjemhavn="${ship.hjemhavn}", kaldesignal="${ship.kaldesignal}", unikt_mmsi_nummer=${ship.unikt_mmsi_nummer}, 
+    anvendelse="${ship.anvendelse}", brt_bt=${ship.brt_bt}, laengde=${ship.laengde}, 
+    maks_antal_om_bord=${ship.maks_antal_om_bord} WHERE id=${id}`;
+
+    console.log(sql)
+
+    return new Promise((resolve, reject) => {
+        con.query(sql, (err, result, fields) => {
+            if(err) throw err;
+            resolve(result);
+        });
+    });
+}
 
