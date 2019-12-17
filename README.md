@@ -12,7 +12,7 @@ npm install
 ```
 Initialize Databse
 ```
-Run sql from the 'database_sql' folder located in this project
+Create a database named "TwinShips" and run sql from the 'database_sql' folder
 ```
 Start server
 ```
