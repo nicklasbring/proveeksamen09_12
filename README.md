@@ -10,9 +10,9 @@ Install modules
 ```
 npm install
 ```
-Initialize Databse
+Initialize Database
 ```
-Create a database named "TwinShips" and run sql from the 'database_sql' folder
+Run sql from the 'database_sql' folder to setup database
 ```
 Start server
 ```
