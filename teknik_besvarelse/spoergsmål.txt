@@ -1,0 +1,12 @@
+Teknologispørgsmål 1
+Jeg vil sørge for at alt sensitive data vil være enten krypteret eller hashed. 
+På den måde, vil dataene være ubrugelig for hackeren.
+
+
+Teknologispørgsmål 2
+Assymetrisk kryptering er også kaldet public-key kryptering. 
+Hver person har en public og en private key. 
+
+Symmetrisk kryptering kaldes også private-key kryptering. 
+Her findes der kun én nøgle. En private key som skal deles med folk man vil dele indholdet med. 
+Den er derfor ikke ligeså sikker, men hurtigere.
