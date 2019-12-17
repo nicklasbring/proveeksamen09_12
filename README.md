@@ -10,6 +10,10 @@ Install modules
 ```
 npm install
 ```
+Initialize Databse
+```
+Run sql from the 'database_sql' folder located in this project
+```
 Start server
 ```
 npm start
@@ -26,7 +30,7 @@ npm start
 ## Architecture
 |   |   |
 |---|---|
-|  **Backend-sprog** |  Javascript |
+|  **Backend** |  Javascript |
 |  **Framework** |  Express |
 |  **View Engine** |  Handlebars |
 |  **Database** |  Mysql |
