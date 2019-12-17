@@ -1,9 +1,12 @@
 var express = require('express');
 var router = express.Router();
+var weatherData = require('../public/javascripts/weatherData');
 
-/* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
+//This user endpoint is now being used as an endpoint for weather data api
+router.get('/', async(req, res, next) => {
+  res.render('weatherData', { 
+    weatherData: await weatherData.getWeatherData()
+  });
 });
 
 module.exports = router;
